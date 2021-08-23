@@ -5,22 +5,22 @@
 * Codigo con funciones comentadas y explicadas dentro del index
     // Funcion que valida los campos obligatorios "needs-validation"
 
-    (function () {
-    'use strict'
+         (function () {
+            'use strict'
 
-        window.addEventListener('load', function () {
-        var forms = document.getElementsByClassName('needs-validation')
-        Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-            form.classList.add('was-validated')
+                window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation')
+                Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                    }, false)
+                })
             }, false)
-        })
-    }, false)
-}())
+        }())
 
 *functions : [header, cart_item,cart,billing,footer_link,footer]
 
